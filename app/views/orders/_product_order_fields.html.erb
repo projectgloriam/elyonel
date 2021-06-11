@@ -1,0 +1,8 @@
+<div class="row nested-fields">
+	<div class="cell"><%= f.input_field :product_id, collection: @products, class: 'productsearch' %></div>
+	<div class="cell quantity"><%= f.input_field :quantity, as: :integer, onkeyup: 'calculate_item();' %></div>
+	<div class="cell price"></div>
+	<div class="cell"><%= link_to_remove_association "Remove item", f, :class => "button alert" %></div>
+</div>
+
+</br>

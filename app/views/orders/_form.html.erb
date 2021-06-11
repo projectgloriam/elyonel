@@ -1,0 +1,19 @@
+<%= simple_form_for order do |f| %>
+  <%= f.input :user_id, as: :hidden %>
+  <!-- , :input_html => { :value => current_user.id } -->
+  <%= f.input :client_id, :collection => @clients %>
+
+  <h3>Product Orders</h3>
+  <div id='product_orders'>
+    <%= f.simple_fields_for :product_orders do |product_order| %>
+      <%= render 'product_orders_fields', :f => product_order %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'Add Product Order', f, :product_orders %>
+    </div>
+  </div>
+
+  <%= f.input :price, as: :decimal %>
+  <%= f.input :complete, as: :boolean %>
+  <%= f.submit 'Save' %>
+<% end %>

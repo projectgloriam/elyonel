@@ -1,0 +1,27 @@
+<%= form_with(model: profit, local: true) do |form| %>
+  <% if profit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profit.errors.count, "error") %> prohibited this profit from being saved:</h2>
+
+      <ul>
+      <% profit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :total %>
+    <%= form.text_field :total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expenses %>
+    <%= form.text_field :expenses %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

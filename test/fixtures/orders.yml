@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1.5
+  user: one
+  client: one
+  complete: false
+
+two:
+  price: 1.5
+  user: two
+  client: two
+  complete: false

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  create_user: false
+  edit_user: false
+  delete_user: false
+
+two:
+  title: MyString
+  create_user: false
+  edit_user: false
+  delete_user: false
